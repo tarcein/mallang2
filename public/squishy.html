@@ -182,7 +182,7 @@
         slimeCol+=sky*slimeEdge*.58+mix(uColor,vec3(1.0),.42)*(slimeFlow*.13+transmission)+vec3(wetHighlight);
         col=mix(col,slimeCol,uSlangi);
         vec2 photoUv=sphereNormal.xy*.5+.5;
-        float photoMask=smoothstep(-.05,.18,vBase.z)*uHasPhoto;
+        float photoMask=uHasPhoto;
         float faceMotion=1.0-uSlangi;
         float photoExpression=clamp(uPress+length(uDrag)*.45,0.0,1.0)*uHasPhoto*faceMotion,photoBlink=max(photoExpression*.72,pow(max(0.0,sin(uTime*1.37)),54.0))*faceMotion;
         float eyeWarpL=1.0-smoothstep(.035,.11,distance(photoUv,uPhotoEyeL)),eyeWarpR=1.0-smoothstep(.035,.11,distance(photoUv,uPhotoEyeR));
