@@ -17,6 +17,8 @@ test("builds the standalone Cyber Squishy site", async () => {
   assert.match(game, /squishy-streak/);
   assert.match(game, /collectionDefinitions/);
   assert.match(game, /evolutionName/);
+  assert.match(game, /uEvolution/);
+  assert.match(game, /growthScale\(\)\{const level/);
   assert.match(game, /#battleBtn,#battleStage,#battleDialog\{display:none!important\}/);
   await access(new URL("../public/wax-crack.mp3", import.meta.url));
   await access(new URL("../public/og.png", import.meta.url));
